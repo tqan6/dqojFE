@@ -99,8 +99,10 @@ devMiddleware.waitUntilValid(() => {
     if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
       opn(uri)
     }
+    console.log(port)
     server = app.listen(port)
     _resolve()
+    console.log("Done")
   })
 })
 
